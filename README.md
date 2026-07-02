@@ -18,4 +18,4 @@ This academic capstone project focuses on evaluating large-scale healthcare data
 3. **Model Training & Analytical QA:** Implemented and compared multiple predictive machine learning algorithms (including Logistic Regression, Naive Bayes, Random Forest, Decision Tree, KNN, and SVM).
 4. **Performance Evaluation:** Generated and visualized rigorous validation outputs, including confusion matrices and model accuracy charts, to verify diagnostic precision.
 5. **Deployment:** Structured a comprehensive web-based analytical dashboard interface using secure backend routes to display predictive risk insights seamlessly.
-6.
+
