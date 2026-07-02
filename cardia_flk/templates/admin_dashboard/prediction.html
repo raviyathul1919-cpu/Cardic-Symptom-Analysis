@@ -1,0 +1,101 @@
+{% include "admin_dashboard/navi.html" %}
+<div class="heading">
+
+     
+       <h2>Cardiac Disease Prediction (Decision Tree)</h2>
+   <form method="post">
+    <table border="1" cellpadding="8" cellspacing="0">
+        <tr>
+            <td>Feature</td>
+            <td>Input</td>
+        </tr>
+
+        <tr>
+            <td>Name</td>
+            <td><input type="text" name="name" pattern="[A-Za-z]+" required></td>
+        </tr>
+
+        <tr>
+            <td>Age</td>
+            <td><input type="number" name="age" required></td>
+        </tr>
+
+        <tr>
+            <td>Gender (0 = Female, 1 = Male)</td>
+            <td><input type="number" name="Gender" required></td>
+        </tr>
+
+        <tr>
+            <td>Chest Pain Type (cp)</td>
+            <td><input type="number" name="cp" required></td>
+        </tr>
+
+        <tr>
+            <td>Resting Blood Pressure (trestbps)</td>
+            <td><input type="number" name="trestbps" required></td>
+        </tr>
+
+        <tr>
+            <td>Cholesterol (chol)</td>
+            <td><input type="number" name="chol" required></td>
+        </tr>
+
+        <tr>
+            <td>Fasting Blood Sugar (fbs)</td>
+            <td><input type="number" name="fbs" required></td>
+        </tr>
+
+        <tr>
+            <td>Resting ECG (restecg)</td>
+            <td><input type="number" name="restecg" required></td>
+        </tr>
+
+        <tr>
+            <td>Max Heart Rate (thalach)</td>
+            <td><input type="number" name="thalach" required></td>
+        </tr>
+
+        <tr>
+            <td>Exercise Induced Angina (exang)</td>
+            <td><input type="number" name="exang" required></td>
+        </tr>
+
+        <tr>
+            <td>ST Depression (oldpeak)</td>
+            <td><input type="number" name="oldpeak" step="0.1" required></td>
+        </tr>
+
+        <tr>
+            <td>Slope</td>
+            <td><input type="number" name="slope" required></td>
+        </tr>
+
+        <tr>
+            <td>Number of Major Vessels (ca)</td>
+            <td><input type="number" name="ca" required></td>
+        </tr>
+
+        <tr>
+            <td>Thalassemia (thal)</td>
+            <td><input type="number" name="thal" required></td>
+        </tr>
+    </table>
+    <br>
+    <input type="submit" value="Predict">
+</form>
+
+
+
+{% if prediction %}
+    <h3>Prediction: {{ prediction }}</h3>
+{% endif %}
+
+
+<br><br><br><br><br>
+
+        
+      
+    </div>
+
+ 
+{% include "admin_dashboard/footer.html" %}

@@ -1,0 +1,66 @@
+{% include "navi.html" %}
+
+<div class="heading">
+ <table width="50%" align="center"> 
+ <tr>
+ <td>
+ 
+ <h2>User Registration</h2>
+<form name="log" method="post" action="{{url_for('register')}}">
+					<table border="0">
+					          <tr>
+                       <td>Name</td>
+                        <td><input type="text" name="name" pattern="[A-Za-z ]+" required/></td>
+                      </tr>
+                     <tr>
+                       <td>Age </td>
+                        <td><input type="number" name="age" required/></td>
+                      </tr>
+                  <tr>
+                        <td>Gender</td>
+                        <td>            
+
+<select name="gender" id="gender">
+  <option value="">-- Select Gender --</option>
+  <option value="male">Male</option>
+  <option value="female">Female</option>
+ 
+</select>
+
+                        </td>
+                      </tr>
+                     <tr>
+                       <td>Mobile No </td>
+                        <td><input type="text" name="mob" pattern="[6-9][0-9]{9}" maxlength="10" required/></td>
+                      </tr>
+                        <tr>
+                       <td>Mail Id </td>
+                        <td><input type="email" name="mail"  required/></td>
+                      </tr>
+
+
+  <tr>
+                        <td>Username</td>
+                        <td><input type="text" name="uname" required/></td>
+                      </tr>
+                      <tr>
+                        <td>Password</td>
+                        <td><input type="password" name="pass" required /></td>
+                      </tr>
+                      <tr>
+                        <td><input type="submit" name="submit" value="submit" /></td>
+                        <td><input type="submit" name="cancel" value="cancel" /></td>
+ 
+                      </tr>
+                    </table>
+					</form>
+          </td>
+			<td>
+			
+			 
+			<img src="{{ url_for('static', filename='img/reg.png') }}" width="200px">
+			</td>
+			</tr>
+	
+			</table>
+       {% include "footer.html" %}

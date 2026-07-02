@@ -1,0 +1,29 @@
+{% include "admin_dashboard/navi.html" %}
+<div class="heading">
+
+        
+       
+
+         <h2>Performance Metrics</h2>
+<table border="1">
+    <tr>
+        <th>Model</th><th>Accuracy</th><th>Precision</th><th>Recall</th><th>F1 Score</th><th>Confusion Matrix</th>
+    </tr>
+    {% for r in results %}
+    <tr>
+        <td>{{ r.model }}</td>
+        <td>{{ r.accuracy }}%</td>
+        <td>{{ r.precision }}%</td>
+        <td>{{ r.recall }}%</td>
+        <td>{{ r.f1_score }}%</td>
+        <td><img src="{{ r.cm_path }}" width="400"></td>
+    </tr>
+    {% endfor %}
+</table>
+<br><br><br><br><br>
+
+      
+    </div>
+
+ 
+{% include "admin_dashboard/footer.html" %}

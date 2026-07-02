@@ -1,0 +1,56 @@
+{% include "admin_dashboard/navi.html" %}
+<div class="heading">
+
+     
+       <h2>Cardiac Disease Prediction (Decision Tree) Report</h2>
+    <table border="1" cellpadding="8" cellspacing="0">
+       <tr>
+        <td><strong>Name</strong></td>
+				  <td><strong>Age</strong></td>
+				  <td><strong>Gender (0 = Female, 1 = Male)</strong></td>  
+				   <td><strong>Chest Pain Type (cp)</strong></td>
+
+					  <td><strong>Resting Blood Pressure (trestbps)</strong></td>
+                    <td><strong>Cholesterol (chol)</strong></td>
+                    <td><strong>Fasting Blood Sugar (fbs)</strong></td>
+                    <td><strong>Resting ECG (restecg)</strong></td>
+                    <td><strong>Max Heart Rate (thalach)</strong></td>
+                    <td><strong>Exercise Induced Angina (exang)</strong></td>
+                    <td><strong>ST Depression (oldpeak)</strong></td>
+                    <td><strong>Slope</strong></td>
+                    <td><strong>Number of Major Vessels (ca)</strong></td>
+                    <td><strong>Thalassemia (thal)</strong></td>
+                      <td><strong>Result</strong></td>
+                         <td><strong>Action</strong></td>
+				  </tr>
+				  {% for account in account %}
+          <tr>
+            <td>{{ account['name'] }}</td>
+          <td>{{ account['age'] }}</td>
+          <td>{{ account['gender'] }}</td>
+          <td>{{ account['cp'] }}</td>
+          <td>{{ account['trestbps'] }}</td>
+         <td>{{ account['chol'] }}</td>
+          <td>{{ account['fbs'] }}</td>
+          <td>{{ account['restecg'] }}</td>
+          <td>{{ account['thalach'] }}</td>
+          <td>{{ account['exang'] }}</td>
+          <td>{{ account['oldpeak'] }}</td>
+          <td>{{ account['slope'] }}</td>
+         <td>{{ account['ca'] }}</td>
+          <td>{{ account['thal'] }}</td>
+          <td>{{ account['prediction_result'] }}</td>
+           <td>
+            <form method="post" action="{{ url_for('prediction_report') }}">
+              <input type="hidden" name="rg" value="{{ account.id }}">
+              <input type="submit" name="Delete" value="Delete">
+            </form>
+          </td>
+
+          </tr>
+          {% endfor %}
+    </table>
+ 
+    </div>
+
+ 
