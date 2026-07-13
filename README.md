@@ -1,4 +1,4 @@
-# Cardic-Symptom-Analysis
+# Cardiac-Symptom-Analysis
 Predicting cardiac risks using Python and Machine Learning
 # Cardiac Symptom Analysis & Risk Prediction
 
